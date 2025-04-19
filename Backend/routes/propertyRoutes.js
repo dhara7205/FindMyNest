@@ -11,6 +11,7 @@ router.post('/create', protect, async (req, res) => {
     const property = await Property.create({
       title,
       description,
+      type,
       price,
       location,
       images,

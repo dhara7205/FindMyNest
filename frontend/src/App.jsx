@@ -3,17 +3,22 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import PropertyForm from './pages/PropertyForm';
-import PropertyDetails from './pages/PropertyDetails';
+import Navbar from './components/Navbar';
+import PropertyList from './pages/PropertyList';
+
+
 
 function App() {
   return (
     <Router>
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/add-property" element={<PropertyForm />} />
-        <Route path="/property/:id" element={<PropertyDetails />} />
+        <Route path="/properties" element={<PropertyList />} />
+
       </Routes>
     </Router>
   );

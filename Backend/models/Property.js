@@ -9,6 +9,10 @@ const propertySchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please add a description for the property'],
   },
+  type: {
+    type: String,
+    required: [true, 'Please add a type for the property'],
+  },
   price: {
     type: Number,
     required: [true, 'Please add a price for the property'],
