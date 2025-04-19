@@ -1,0 +1,48 @@
+/* Hero section with background image */
+.home-hero {
+    background-image: url('/house-bg.webp');
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    position: relative;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-title {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  /* Middle navbar below image */
+  .mid-navbar {
+    padding: 30px 0;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .nav-option {
+    font-size: 1.4rem;
+    margin: 0 1rem;
+    padding: 0.6rem 1.6rem;
+    background-color: white;
+    color: #000;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .nav-option:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
