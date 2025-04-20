@@ -1,0 +1,12 @@
+/* Add some padding or margin to the middle content area */
+.main-content {
+    padding: 20px; /* Adjust the padding as needed */
+    margin-top: 20px;  /* Optional, if you want space above the middle content */
+    margin-bottom: 50px; /* Adjust this value to create space before the footer */
+  }
+  
+  /* Optional: If you want the footer to be at the bottom of the page */
+  footer {
+    margin-top: auto; /* Push footer to the bottom if using Flexbox layout */
+  }
+  

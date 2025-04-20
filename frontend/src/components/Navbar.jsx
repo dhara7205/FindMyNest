@@ -22,6 +22,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('user');
+    localStorage.removeItem('token');
     setUser(null);
     navigate('/login');
   };
@@ -46,11 +47,7 @@ const Navbar = () => {
           </li>
 
           <li className="nav-item">
-            <Link className="nav-link" to="/properties">Properties</Link>
-          </li>
-
-          <li className="nav-item">
-            <Link className="nav-link" to="/add-property">Add Listing</Link>
+            <Link className="nav-link" to="/AboutUs">About Us</Link>
           </li>
 
           {!user ? (

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Rent.css';
+import PaymentButton from "../components/PaymentButton";
 
 
 const Rent = () => {
@@ -57,7 +58,8 @@ const Rent = () => {
                 <p><strong>Location:</strong> {property.location}</p>
                 <p><strong>Price:</strong> ${property.price}</p>
                 <p><strong>Contact:</strong> {property.contact}</p>
-                <button className="buy-button">Rent Now</button>
+                {/* <button className="buy-button">Rent Now</button> */}
+                <PaymentButton />
               </div>
             </div>
           ))

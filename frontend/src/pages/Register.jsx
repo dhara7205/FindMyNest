@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Register.css'; // Import the CSS file
 
 const Register = () => {
   const [formData, setFormData] = useState({ name: '', email: '', password: '' });
@@ -56,7 +57,7 @@ const Register = () => {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="register-container">
       <h2>Register</h2>
       {error && <div className="alert alert-danger">{error}</div>}
       <form onSubmit={handleSubmit}>
@@ -87,7 +88,7 @@ const Register = () => {
             onChange={(e) => setFormData({ ...formData, password: e.target.value })}
           />
         </div>
-        <button type="submit" className="btn btn-primary">Register</button>
+        <button type="submit" className="btn-primary">Register</button>
       </form>
     </div>
   );

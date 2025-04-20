@@ -1,0 +1,33 @@
+/* Footer Styles */
+.footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .footer a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    color: #f39c12;
+    text-decoration: underline;
+  }
+  
+  .footer h5 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+  
+  .footer .social-icons a {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .social-icons a:hover {
+    color: #f39c12;
+  }
+  

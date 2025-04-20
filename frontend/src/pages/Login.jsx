@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './Login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -15,44 +16,44 @@ const Login = () => {
         email,
         password
       });
-
+      const { token, ...userData } = res.data;
       // Save user data in localStorage
-      localStorage.setItem('user', JSON.stringify(res.data.user));
+      localStorage.setItem('token', token);
+      localStorage.setItem('user', JSON.stringify(userData));
       
       // Redirect to home
       navigate('/');
-
     } catch (err) {
       setError('Invalid email or password');
     }
   };
 
   return (
-    <div className="container mt-5">
+    <div className="login-container">
       <h2>Login</h2>
-      {error && <p className="text-danger">{error}</p>}
+      {error && <p className="error-message">{error}</p>}
       <form onSubmit={handleLogin}>
-        <div className="mb-3">
+        <div className="input-group">
           <label>Email</label>
           <input
             type="email"
-            className="form-control"
+            className="input-field"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
-        <div className="mb-3">
+        <div className="input-group">
           <label>Password</label>
           <input
             type="password"
-            className="form-control"
+            className="input-field"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
         </div>
-        <button type="submit" className="btn btn-primary">Login</button>
+        <button type="submit" className="submit-button">Login</button>
       </form>
     </div>
   );

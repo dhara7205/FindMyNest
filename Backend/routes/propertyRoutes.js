@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { protect } = require('../middleware/authMiddleware');
+const  protect  = require('../middleware/authMiddleware');
 const Property = require('../models/Property');
+
 
 // Create Property (POST)
 router.post('/create', protect, async (req, res) => {
