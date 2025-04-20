@@ -9,7 +9,7 @@ const propertySchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please add a description for the property'],
   },
-  type: {
+  category: {
     type: String,
     required: [true, 'Please add a type for the property'],
   },
@@ -20,6 +20,10 @@ const propertySchema = new mongoose.Schema({
   location: {
     type: String,
     required: [true, 'Please add a location'],
+  },
+  contact: {
+    type: String,
+    required: [true, 'Please add contactNO.'],
   },
   images: {
     type: [String], // Array of image URLs

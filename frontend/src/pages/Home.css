@@ -1,6 +1,6 @@
 /* Hero section with background image */
 .home-hero {
-    background-image: url('/house-bg.webp');
+    background-image: url('/house-bg.jpg');
     background-size: cover;
     background-position: center;
     height: 450px;
@@ -17,7 +17,7 @@
   }
   
   .hero-title {
-    color: white;
+    color: #f0f0f0;
     font-size: 3rem;
     font-weight: bold;
   }

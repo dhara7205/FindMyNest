@@ -1,0 +1,82 @@
+/* Container for the entire property list */
+.property-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Card container for each property */
+  .property-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .property-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Image for each property */
+  .property-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* Details of the property */
+  .property-details {
+    text-align: center;
+  }
+  
+  /* Title of the property */
+  .property-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Price of the property */
+  .property-details p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  /* Category and location text style */
+  .property-details p strong {
+    font-weight: bold;
+  }
+  
+  /* Buy button */
+  .buy-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .buy-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Loading and error states */
+  .loading, .error {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
+  .error {
+    color: red;
+  }
+  

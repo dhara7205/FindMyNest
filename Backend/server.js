@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
+const Property = require('./models/Property.js');
 
 const app = express();
 app.use(cors());
@@ -14,6 +15,16 @@ const propertyRoutes = require('./routes/propertyRoutes');
 // Use routes
 app.use('/api/users', userRoutes);
 app.use('/api/properties', propertyRoutes);
+
+app.get('/properties', async (req, res) => {
+  try {
+    const properties = await Property.find(); // assuming Mongoose model
+    res.json(properties);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching properties" });
+  }
+});
+
 
 // DB Connection
 mongoose.connect(process.env.MONGO_URI, {

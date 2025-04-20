@@ -5,15 +5,16 @@ const Property = require('../models/Property');
 
 // Create Property (POST)
 router.post('/create', protect, async (req, res) => {
-  const { title, description, price, location, images } = req.body;
+  const { title, description,category, price, location,contact, images } = req.body;
 
   try {
     const property = await Property.create({
       title,
       description,
-      type,
+      category,
       price,
       location,
+      contact,
       images,
       createdBy: req.user.id, // Link property to logged-in user
     });
@@ -27,7 +28,7 @@ router.post('/create', protect, async (req, res) => {
 router.get('/', async (req, res) => {
   try {
     const properties = await Property.find();
-    res.json(properties);
+    res.json(properties); // Ensure this is an array
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
