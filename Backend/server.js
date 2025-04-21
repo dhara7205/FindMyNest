@@ -3,10 +3,13 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
 const Property = require('./models/Property.js');
+const path = require('path');
+
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 // Import routes
 const userRoutes = require('./routes/userRoutes');
