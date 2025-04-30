@@ -24,16 +24,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/AboutUs" element={<AboutUs />} />
-          <Route path="/buy" element={<Buy />} />
-          <Route path="/rent" element={<Rent />} />
-          <Route
-            path="/sell"
-            element={
-              <PrivateRoute>
-                <Sell />
-              </PrivateRoute>
-            }
-          />
+          <Route path="/buy" element={<PrivateRoute><Buy /></PrivateRoute>} />
+          <Route path="/rent" element={<PrivateRoute><Rent /></PrivateRoute>} />
+          <Route path="/sell"element={<PrivateRoute><Sell /></PrivateRoute>}/>
         </Routes>
       </div>
 
