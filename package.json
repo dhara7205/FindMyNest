@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "concurrently": "^9.1.2"
+    "concurrently": "^9.1.2",
+    "serve": "^14.2.4"
   }
 }
