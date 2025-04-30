@@ -1,4 +1,9 @@
 {
+  "name": "findmynest",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"cd Backend && npm start\" \"serve -s frontend/dist -l 5000\""
+  },
   "dependencies": {
     "concurrently": "^9.1.2",
     "serve": "^14.2.4"
