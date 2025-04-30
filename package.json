@@ -2,7 +2,8 @@
   "name": "findmynest",
   "version": "1.0.0",
   "scripts": {
-    "start": "npx concurrently \"cd Backend && npm start\" \"serve -s frontend/dist -l 5000\""
+    "start": "npm run concurrent",
+    "concurrent": "concurrently \"cd Backend && npm start\" \"serve -s frontend/dist -l 5000\""
   },
   "dependencies": {
     "concurrently": "^9.1.2",
